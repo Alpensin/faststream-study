@@ -1,4 +1,11 @@
 services:
+  faststream:
+    build:
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
   zookeeper:
     image: 'confluentinc/cp-zookeeper:latest'
     ports:

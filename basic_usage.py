@@ -1,7 +1,9 @@
+from time import sleep
 from faststream import FastStream
 from faststream.kafka import KafkaBroker
 
-broker = KafkaBroker("localhost:9092")
+sleep(5)
+broker = KafkaBroker(["kafka1:9091", "kafka2:9092", "kafka3:9093"])
 
 app = FastStream(broker)
 
