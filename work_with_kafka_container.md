@@ -6,6 +6,10 @@ docker compose up --detach --wait
 ```sh
 docker compose down
 ```
+# Topics list
+```sh
+docker compose exec -it kafka1 kafka-topics --bootstrap-server localhost:9091 --list
+```
 # Create topic
 ```sh
 docker compose exec -it kafka1 kafka-topics --bootstrap-server localhost:9091 --create --replication-factor 3 --partitions 3 --topic test
